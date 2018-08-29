@@ -9,7 +9,9 @@
 import UIKit
 
 class ExtButton: UIButton {
-
     var status : Int = 0
+}
 
+class DKCornerButton : UIButton {
+    
 }

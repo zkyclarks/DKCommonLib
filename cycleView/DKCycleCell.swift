@@ -8,10 +8,6 @@
 
 import UIKit
 
-class DKCycleCell: UICollectionViewCell {
-    var model : DKBaseModel?
-}
-
-class DKCycleCellModel: DKBaseModel {
+class DKCycleCell: DKCollectionCell {
     
 }
