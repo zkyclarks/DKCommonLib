@@ -14,14 +14,14 @@ enum BoardShownStatus {
     case NoShown
     case BoardShown
 }
-public protocol DKChatBoardDelegate : NSObjectProtocol {
+public protocol DKChatBoardDelegate  {
     func didSendTextMessage(message:String)
     func didSendImageMessage(message:UIImage)
-    func didSendSoundMessage(message:Data)
+    func didSendSoundMessage(message:Data, duration: Int)
     func didSendFileMessage(message:Data)
 }
 class DKChatBoardManager {
-    weak var delegate:DKChatBoardDelegate?
+    var delegate:DKChatBoardDelegate?
     var boardAnimateDuration:TimeInterval = 0.25
     var boardShownStatus:BoardShownStatus = .NoShown
     var boardHideFrame = CGRect.zero
@@ -42,7 +42,7 @@ class DKChatBoardManager {
     weak var contentView:UIView? {
         didSet {
             let bgView = UIView.init(frame:(contentView?.bounds)!)
-            contentView?.addSubview(bgView)
+//            contentView?.addSubview(bgView)
             let tap = UITapGestureRecognizer.init(target: self, action: #selector(bgViewTaped))
             bgView.addGestureRecognizer(tap)
             

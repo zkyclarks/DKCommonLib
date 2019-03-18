@@ -112,9 +112,9 @@ class DKChatSoundView: UIImageView {
                           height: height() / 2)
         imageTip.frame = rect
         cancelImageTip.frame = rect
-        countdownTip.setWidth(width())
-        countdownTip.setHeight(20)
-        countdownTip.setY(10)
+        countdownTip.assign(width:width())
+        countdownTip.assign(height:20)
+        countdownTip.assign(y:10)
         tip.frame = CGRect(x: (bounds.width - 120) / 2,
                             y: bounds.height - 28,
                             width: 120, height: 20)

@@ -24,4 +24,13 @@ extension String {
         let rect:CGRect = self.boundingRect(with: CGSize(width:width, height:999.9), options: option, attributes: attributes, context: nil)
         return rect.height
     }
+    
+    func substring (start:Int, lenth:Int) -> String {
+        guard start < count && lenth < count else { return "" }
+        guard lenth > 0 && count - start - lenth >= 0 else { return "" }
+        let startIndex = self.index(self.startIndex, offsetBy: start)
+        let endIndex = self.index(startIndex, offsetBy: lenth)
+        let substr = self[startIndex..<endIndex]
+        return String(substr)
+    }
 }

@@ -64,16 +64,17 @@ class DKEmojiView : DKBaseView {
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = UIColor.white
         addSubview(cycleView)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         cycleView.frame = CGRect(x: 15, y: 10, width: bounds.width - 30, height: bounds.height - 60)
-        sendButton.setSize(CGSize(width: 50, height: 25))
-        sendButton.setOrigin(CGPoint(x: width() - 80, y: height() - 40))
-        deleteButton.setSize(CGSize(width: 50, height: 30))
-        deleteButton.setOrigin(CGPoint(x: width() - 140, y: height() - 40))
+        sendButton.assign(size:CGSize(width: 50, height: 25))
+        sendButton.assign(origin:CGPoint(x: width() - 80, y: height() - 40))
+        deleteButton.assign(size:CGSize(width: 50, height: 30))
+        deleteButton.assign(origin:CGPoint(x: width() - 140, y: height() - 40))
     }
     
     

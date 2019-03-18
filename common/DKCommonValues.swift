@@ -8,7 +8,7 @@
 
 import UIKit
 
-let kStatusBarH : CGFloat = UIDevice.current.statusBarHeight()
+let kStatusBarH : CGFloat = UIDevice.statusBarHeight()
 let kNavigationBarH : CGFloat = 44
 let kTabbarH : CGFloat = 44
 let kTopBarH : CGFloat = kStatusBarH + kNavigationBarH

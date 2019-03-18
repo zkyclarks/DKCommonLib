@@ -120,8 +120,8 @@ class DKChatToolbar: UIView , UITextViewDelegate {
             let offset = textInput.contentSize.height - textInputContentHeight
             let height = frame.height + offset
             let y = frame.minY - offset
-            setHeight(height)
-            setY(y)
+            assign(height:height)
+            assign(y:y)
             textInputContentHeight = textInput.contentSize.height
         }
     }

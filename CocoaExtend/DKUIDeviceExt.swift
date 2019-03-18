@@ -24,7 +24,7 @@ extension UIDevice {
         return false
     }
     public static func statusBarHeight() -> CGFloat {
-        if UIDevice.current.isIphoneX() {
+        if UIDevice.isIphoneX() {
             return 44
         } else {
             return 20

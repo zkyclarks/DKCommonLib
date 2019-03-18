@@ -9,32 +9,32 @@
 import UIKit
 
 extension UIView {
-    func setSize(_ size: CGSize) {
+    func assign(size: CGSize) {
         var rect = frame
         rect.size = size
         frame = rect
     }
-    func setWidth(_ width: CGFloat) {
+    func assign(width: CGFloat) {
         var rect = frame
         rect.size.width = width
         frame = rect
     }
-    func setHeight(_ height: CGFloat) {
+    func assign(height: CGFloat) {
         var rect = frame
         rect.size.height = height
         frame = rect
     }
-    func setOrigin(_ origin: CGPoint) {
+    func assign(origin: CGPoint) {
         var rect = frame
         rect.origin = origin
         frame = rect
     }
-    func setX(_ x: CGFloat) {
+    func assign(x: CGFloat) {
         var rect = frame
         rect.origin.x = x
         frame = rect
     }
-    func setY(_ y: CGFloat) {
+    func assign(y: CGFloat) {
         var rect = frame
         rect.origin.y = y
         frame = rect
